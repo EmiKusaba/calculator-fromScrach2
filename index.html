@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+  <title>Culculator</title>
 </head>
+
 <body>
-  
+  <!--screen-->
+  <div class="calc">
+    <main class="screen">
+      <div>
+        <label>First Number</label>
+        <input type="number" onkeyup="saveFirstNumber(this.value)">
+      </div>
+      <div>
+        <label>Second Number</label>
+        <input type="number" onkeyup="saveSecondNumber(this.value)">
+      </div>
+      <div>
+        <label>Result</label>
+        <input id="result" type="number">
+      </div>
+    </main>
+    <!--button-->
+    <section>
+      <div class="calculator-buttons">
+        <button type="button" class="calc-button is-clear" type="reset">C</button>
+        <button type="button" class="calc-button" id="division" onclick="changeOperation(this.id)">%</button>
+        <button type="button" class="calc-button">7</button>
+        <button type="button" class="calc-button">8</button>
+        <button type="button" class="calc-button">9</button>
+        <button type="button" class="calc-button" id="multiplication" onclick="changeOperation(this.id)">*</button>
+        <button type="button" class="calc-button">4</button>
+        <button type="button" class="calc-button">5</button>
+        <button type="button" class="calc-button">6</button>
+        <button type="button" class="calc-button" id="subtraction" onclick="changeOperation(this.id)">-</button>
+        <button type="button" class="calc-button">1</button>
+        <button type="button" class="calc-button">2</button>
+        <button type="button" class="calc-button">3</button>
+        <button type="button" class="calc-button" id="addition" onclick="changeOperation(this.id)">+</button>
+        <button type="button" class="calc-button is-zero">0</button>
+        <button type="button" class="calc-button is-equal" onclick="equals()">=</button>
+      </div>
+    </section>
+  </div>
 </body>
+
 </html>
