@@ -28,3 +28,21 @@ const onOperation = (val) => {
 const updateScreen = () => {
   document.getElementById("screen").innerHTML = firstNum + " " + operation + " " + secondNum
 }
+
+const onEquals = () => {
+  if (firstNum === "" || secondNum === "" || operation === "") {
+    return
+  }
+  let screen = getElementById("screen")
+  switch (operation) {
+    case "+": parseInt(firstNum) + parseInt(secondNum)
+      break;
+    case "-": parseInt(firstNum) - parseInt(secondNum)
+      break;
+    case "x": parseInt(firstNum) * parseInt(secondNum)
+      break;
+    case "/": parseInt(firstNum) / parseInt(secondNum)
+      break;
+    default: "Choose an operation"
+  }
+}
